@@ -1,0 +1,99 @@
+/* font famaily */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* font size */
+.fs-tiny {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.fs-small {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.fs-base {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.fs-medium {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: -0.002em;
+}
+
+.fs-large {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.fs-Xlarge {
+  font-size: 1.9444em;
+}
+
+.fs-main {
+  font-size: 48px;
+}
+
+.fs-play {
+  font-size: 2.4em;
+}
+
+/* font-weight  */
+.fw-thin {
+  font-weight: 100;
+}
+
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-Medium {
+  font-weight: 500;
+}
+
+.fw-Bold {
+  font-weight: 700;
+}
+
+.fw-Black {
+  font-weight: 900;
+}
+
+/* font color */
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-primary {
+  color: #354463;
+}
+
+.text-secondary {
+  color: #727c8e;
+}
+
+.text-teriary {
+  color: #777a81;
+}
+
+.text-quick {
+  color: #333333;
+}
+
+.text-footer {
+  color: #9e9e9e;
+}
+
+.text-Policy {
+  color: #ff457e;
+}
