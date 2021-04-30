@@ -29,47 +29,51 @@
   </head>
   <body>
     <header id="header text-primary">
-      <div class="header-wrap">
-        <h1 class="logo"><a href="#" class="logo-link">말랑말랑 플랫폼</a></h1>
-        <button class="btn-side"><i class="fas fa-bars"></i></button>
-        <div class="side">
-          <a href="#" class="login fs-tiny text-white">로그인</a>
-          <nav class="gnb">
-            <ul class="gnb-list">
-              <li class="gnb-item">
-                <a href="#">말랑말랑무브먼트</a>
-              </li>
-              <li class="gnb-item">
-                <a href="#" class="link-img">한컴타자</a>
-              </li>
-              <li class="gnb-item">
-                <a href="#" class="link-img">말랑말랑 스토어</a>
-              </li>
-              <li class="gnb-item">
-                <a href="#">말랑말랑 콘텐츠</a>
-              </li>
-              <li class="gnb-item text-white fw-Medium">
-                <a href="#">제휴제안</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="quick-nav">
-            <ul class="quick-list text-m-quick">
-              <li class="quick-item hidden"><a href="#">한컴타자</a></li>
-              <li class="quick-item">
-                <a href="#" class="link-img red">한컴스페이스</a>
-              </li>
-              <li class="quick-item">
-                <a href="#" class="link-img red">한국사퀴즈</a>
-              </li>
-              <li class="quick-item">
-                <a href="#" class="link-img red">한자퀴즈</a>
-              </li>
-              <li class="quick-item hidden"><a href="#">산성비</a></li>
-            </ul>
-          </nav>
+      <div class="container">
+        <div class="header-wrap">
+          <h1 class="logo">
+            <a href="#" class="logo-link">말랑말랑 플랫폼</a>
+          </h1>
+          <button class="btn-side"><i class="fas fa-bars"></i></button>
+          <div class="side">
+            <a href="#" class="login fs-tiny text-white">로그인</a>
+            <nav class="gnb">
+              <ul class="gnb-list">
+                <li class="gnb-item">
+                  <a href="#">말랑말랑무브먼트</a>
+                </li>
+                <li class="gnb-item">
+                  <a href="#" class="link-img">한컴타자</a>
+                </li>
+                <li class="gnb-item">
+                  <a href="#" class="link-img">말랑말랑 스토어</a>
+                </li>
+                <li class="gnb-item">
+                  <a href="#">말랑말랑 콘텐츠</a>
+                </li>
+                <li class="gnb-item text-white fw-Medium">
+                  <a href="#">제휴제안</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="quick-nav">
+              <ul class="quick-list text-m-quick">
+                <li class="quick-item hidden"><a href="#">한컴타자</a></li>
+                <li class="quick-item">
+                  <a href="#" class="link-img red">한컴스페이스</a>
+                </li>
+                <li class="quick-item">
+                  <a href="#" class="link-img red">한국사퀴즈</a>
+                </li>
+                <li class="quick-item">
+                  <a href="#" class="link-img red">한자퀴즈</a>
+                </li>
+                <li class="quick-item hidden"><a href="#">산성비</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="side-black"></div>
         </div>
-        <div class="side-black"></div>
       </div>
     </header>
     <main>
@@ -81,7 +85,6 @@
       if ($(".side").hasClass("open") == false) {
         $(".side").css("display", "flex");
         $(".side-black").show();
-        $(".side").css("animation-name", "sideOpen");
         $(".side").addClass("open");
         console.log("open");
       } else if ($(".side").hasClass("open") == true) {
