@@ -28,7 +28,7 @@
     <script src="../malangmalang/js/jquery-3.4.1.min.js"></script>
   </head>
   <body>
-    <header id="header text-primary">
+    <header id="header" class="text-primary">
       <div class="container">
         <div class="header-wrap">
           <h1 class="logo">
@@ -40,35 +40,39 @@
             <nav class="gnb">
               <ul class="gnb-list">
                 <li class="gnb-item">
-                  <a href="#">말랑말랑무브먼트</a>
+                  <a href="#" class="link">말랑말랑무브먼트</a>
                 </li>
                 <li class="gnb-item">
-                  <a href="#" class="link-img">한컴타자</a>
+                  <a href="#" class="link link-img">한컴타자</a>
                 </li>
                 <li class="gnb-item">
-                  <a href="#" class="link-img">말랑말랑 스토어</a>
+                  <a href="#" class="link link-img">말랑말랑 스토어</a>
                 </li>
                 <li class="gnb-item">
-                  <a href="#">말랑말랑 콘텐츠</a>
+                  <a href="#" class="link">말랑말랑 콘텐츠</a>
                 </li>
                 <li class="gnb-item text-white fw-Medium">
-                  <a href="#">제휴제안</a>
+                  <a href="#" class="link">제휴제안</a>
                 </li>
               </ul>
             </nav>
             <nav class="quick-nav">
               <ul class="quick-list text-m-quick">
-                <li class="quick-item hidden"><a href="#">한컴타자</a></li>
-                <li class="quick-item">
-                  <a href="#" class="link-img red">한컴스페이스</a>
+                <li class="quick-item hidden">
+                  <a href="#" class="link">한컴타자</a>
                 </li>
                 <li class="quick-item">
-                  <a href="#" class="link-img red">한국사퀴즈</a>
+                  <a href="#" class="link link-img red">한컴스페이스</a>
                 </li>
                 <li class="quick-item">
-                  <a href="#" class="link-img red">한자퀴즈</a>
+                  <a href="#" class="link link-img red">한국사퀴즈</a>
                 </li>
-                <li class="quick-item hidden"><a href="#">산성비</a></li>
+                <li class="quick-item">
+                  <a href="#" class="link link-img red">한자퀴즈</a>
+                </li>
+                <li class="quick-item hidden">
+                  <a href="#" class="link">산성비</a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -77,7 +81,62 @@
       </div>
     </header>
     <main>
-      <section class="malang"></section>
+      <section id="malang">
+        <div class="malang-wrap">
+          <div class="slide">
+            <div class="malang-img">
+              <img
+                src="../malangmalang/images/main/visual-img-amogae@2x.png"
+                alt="amogae 이미지"
+              />
+              <img
+                src="../malangmalang/images/main/visual-txt-amogae.svg"
+                alt="amogae 텍스트"
+              />
+            </div>
+            <div class="malang-img">
+              <img
+                src="../malangmalang/images/main/visual-img-gigi@2x.png"
+                alt="gigi 이미지"
+              />
+              <img
+                src="../malangmalang/images/main/visual-txt-gigi.svg"
+                alt="gigi 텍스트"
+              />
+            </div>
+            <div class="malang-img">
+              <img
+                src="../malangmalang/images/main/visual-img-yaya@2x.png"
+                alt="yaya 이미지"
+              />
+              <img
+                src="../malangmalang/images/main/visual-txt-yaya.svg"
+                alt="yaya 텍스트"
+              />
+            </div>
+            <div class="malang-img">
+              <img
+                src="../malangmalang/images/main/visual-img-maman@2x.png"
+                alt="maman 이미지"
+              />
+              <img
+                src="../malangmalang/images/main/visual-txt-maman.svg"
+                alt="maman 텍스트"
+              />
+            </div>
+            <div class="malang-img">
+              <img
+                src="../malangmalang/images/main/visual-img-6b@2x.png"
+                alt="amogae 이미지"
+              />
+              <img
+                src="../malangmalang/images/main/visual-txt-6b.svg"
+                alt="amogae 텍스트"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
   <script>
@@ -94,5 +153,10 @@
         console.log("close");
       }
     });
+    // side black 메뉴 open 중 웹사이즈 크게하면 사라지게 만들기ㅠㅠㅠㅠ 수정필요
+
+    // if ($(window).width() <= "990px") {
+    //   $(".side-black").hide();
+    // }
   </script>
 </html>
