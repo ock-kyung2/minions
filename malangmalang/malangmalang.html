@@ -82,9 +82,14 @@
     </header>
     <main>
       <section id="malang">
-        <div class="malang-wrap">
-          <div class="slide">
-            <div class="malang-img">
+        <div
+          class="malang-wrap swiper-container mySwiper swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events"
+        >
+          <div
+            class="slide swiper-wrapper"
+            id="swiper-wrapper-c72a82897566eb53"
+          >
+            <div class="malang-img swiper-slide swiper-slide-active">
               <img
                 src="../malangmalang/images/main/visual-img-amogae@2x.png"
                 alt="amogae 이미지"
@@ -94,7 +99,7 @@
                 alt="amogae 텍스트"
               />
             </div>
-            <div class="malang-img">
+            <div class="malang-img swiper-slide swiper-slide-active">
               <img
                 src="../malangmalang/images/main/visual-img-gigi@2x.png"
                 alt="gigi 이미지"
@@ -104,7 +109,7 @@
                 alt="gigi 텍스트"
               />
             </div>
-            <div class="malang-img">
+            <div class="malang-img swiper-slide swiper-slide-active">
               <img
                 src="../malangmalang/images/main/visual-img-yaya@2x.png"
                 alt="yaya 이미지"
@@ -114,7 +119,7 @@
                 alt="yaya 텍스트"
               />
             </div>
-            <div class="malang-img">
+            <div class="malang-img swiper-slide swiper-slide-active">
               <img
                 src="../malangmalang/images/main/visual-img-maman@2x.png"
                 alt="maman 이미지"
@@ -124,7 +129,7 @@
                 alt="maman 텍스트"
               />
             </div>
-            <div class="malang-img">
+            <div class="malang-img swiper-slide swiper-slide-active">
               <img
                 src="../malangmalang/images/main/visual-img-6b@2x.png"
                 alt="amogae 이미지"
@@ -138,25 +143,39 @@
         </div>
       </section>
     </main>
-  </body>
-  <script>
-    $(".btn-side,.side-black").click(function () {
-      if ($(".side").hasClass("open") == false) {
-        $(".side").css("display", "flex");
-        $(".side-black").show();
-        $(".side").addClass("open");
-        console.log("open");
-      } else if ($(".side").hasClass("open") == true) {
-        $(".side").hide();
-        $(".side-black").hide();
-        $(".side").removeClass("open");
-        console.log("close");
+    <!-- Swipe -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script>
+      if ($(window).width() >= 574) {
+        var swiper = new Swiper(".mySwiper", {
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
       }
-    });
-    // side black 메뉴 open 중 웹사이즈 크게하면 사라지게 만들기ㅠㅠㅠㅠ 수정필요
 
-    // if ($(window).width() <= "990px") {
-    //   $(".side-black").hide();
-    // }
-  </script>
+      // header nav bar show & hide
+      $(".btn-side,.side-black").click(function () {
+        if ($(".side").hasClass("open") == false && $(window).width() <= 990) {
+          $(".side").css("display", "flex");
+          $(".side-black").show();
+          $(".side").addClass("open");
+          console.log("open");
+        } else if (
+          $(".side").hasClass("open") == true &&
+          $(window).width() <= 990
+        ) {
+          $(".side").hide();
+          $(".side-black").hide();
+          $(".side").removeClass("open");
+          console.log("close");
+        }
+      });
+      // side black 메뉴 open 중 웹사이즈 크게하면 사라지게 만들기ㅠㅠㅠㅠ 수정필요
+
+      // if ($(window).width() <= "990px") {
+      //   $(".side-black").hide();
+      // }
+    </script>
+  </body>
 </html>
