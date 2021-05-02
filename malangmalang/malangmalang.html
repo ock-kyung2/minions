@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -34,7 +34,9 @@
           <h1 class="logo">
             <a href="#" class="logo-link">말랑말랑 플랫폼</a>
           </h1>
-          <button class="btn-side"><i class="fas fa-bars"></i></button>
+          <button class="btn-side" onclick="hamburger()">
+            <i class="fas fa-bars"></i>
+          </button>
           <div class="side">
             <a href="#" class="login fs-tiny text-white">로그인</a>
             <nav class="gnb">
@@ -76,7 +78,7 @@
               </ul>
             </nav>
           </div>
-          <div class="side-black"></div>
+          <div class="side-black" onclick="hamburger()"></div>
         </div>
       </div>
     </header>
@@ -155,26 +157,40 @@
       }
 
       // header nav bar show & hide
-      $(".btn-side,.side-black").click(function () {
-        if ($(".side").hasClass("open") == false && $(window).width() <= 990) {
+
+      function hamburger() {
+        if ($(".side").hasClass("open") == false) {
           $(".side").css("display", "flex");
           $(".side-black").show();
           $(".side").addClass("open");
           console.log("open");
-        } else if (
-          $(".side").hasClass("open") == true &&
-          $(window).width() <= 990
-        ) {
+        } else if ($(".side").hasClass("open") == true) {
           $(".side").hide();
           $(".side-black").hide();
           $(".side").removeClass("open");
           console.log("close");
         }
+      }
+
+      $(window).resize(function () {
+        if ($(window).width() == 992 && $(".side").hasClass("open") == true) {
+          $(".side").hide();
+          $(".side-black").hide();
+          $(".side").removeClass("open");
+        }
       });
+
       // side black 메뉴 open 중 웹사이즈 크게하면 사라지게 만들기ㅠㅠㅠㅠ 수정필요
 
       // if ($(window).width() <= "990px") {
       //   $(".side-black").hide();
+      // }
+
+      // quick nav 슬라이드 (min-width: 991px)
+
+      // if ($(window).width() >= 991) {
+      //   $(".quick-list").css("display", "flex");
+      //   $(".quick-item > .link").css("display", "block");
       // }
     </script>
   </body>

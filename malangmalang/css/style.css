@@ -434,6 +434,10 @@ button:focus {
     animation-name: none;
   }
 
+  .side-black {
+    display: none;
+  }
+
   .login {
     position: absolute;
     margin-left: 715px;
@@ -497,6 +501,7 @@ button:focus {
     width: 100%;
     height: 100%;
   }
+
   .quick-item {
     display: flex;
     flex-direction: column;
@@ -505,8 +510,8 @@ button:focus {
     width: 100%;
     height: 100%;
   }
+
   .quick-item > .link {
-    display: block;
     box-shadow: 0 5px 15px -5px #ff6969;
     border-radius: 26.5px;
   }
@@ -516,7 +521,6 @@ button:focus {
   }
 
   .quick-item > .link {
-    display: block;
     width: 53px;
     height: 53px;
     color: transparent;
