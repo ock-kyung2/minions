@@ -190,6 +190,19 @@
           $(".side-black").show();
           $(".side").removeClass("resize");
           console.log("window resize show");
+        } else if (
+          // 햄버거 바 side 닫기 후 웹사이즈 키울때 nav 사라짐 수정
+          $(window).width() >= 991 &&
+          $(".side").hasClass("open") == false
+        ) {
+          $(".side").css("display", "flex");
+          console.log(">= 991 nav show");
+        } else if (
+          $(window).width() <= 990 &&
+          $(".side").hasClass("open") == false
+        ) {
+          $(".side").css("display", "none");
+          console.log("<= 990 nav hide");
         }
       });
 
