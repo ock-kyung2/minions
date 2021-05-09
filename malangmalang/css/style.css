@@ -54,6 +54,12 @@ button:focus {
   display: none;
 }
 
+.container {
+  display: flex;
+  max-width: 708px;
+  padding: 0 12px;
+}
+
 .link-img::after {
   display: inline-block;
   content: "";
@@ -68,11 +74,35 @@ button:focus {
   background: url(../images/common/ico-link-blank-red.svg) no-repeat;
 }
 
+.btn_detail {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+  padding-right: 15px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 15px rgb(114 124 142 / 36%);
+  border-radius: 20px;
+}
+
+.btn_detail::after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 5px;
+  width: 29px;
+  height: 29px;
+  background: url(../images/common/button-ico-arrow.svg) no-repeat;
+  background-position: center;
+}
+
 /* header */
 #header {
   position: fixed;
   width: 100%;
-  min-width: 320px;
   top: 0;
   left: 0;
   background-color: #ffffff;
@@ -81,19 +111,12 @@ button:focus {
 }
 /* box-shadow가 side에 가려서 안보이네ㅠㅠ 더 연구해보기 */
 
-.container {
-  display: flex;
-  margin: 0 auto;
-  max-width: 708px;
-  height: 68px;
-}
-
 .header-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 68px;
 }
 
 .logo {
@@ -228,11 +251,6 @@ button:focus {
 
 /* MAIN*/
 /* section - malang */
-.malang {
-  width: 100%;
-  height: 100vh;
-}
-
 .slide {
   display: flex;
 }
@@ -274,6 +292,114 @@ button:focus {
   background-color: #4694ff;
 }
 
+/* section - main-info */
+.main-info-wrap {
+  width: 100%;
+  height: 405px;
+  padding: 60px 0;
+}
+.main-info-item {
+  display: flex;
+  margin-bottom: 36px;
+}
+.main-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.main-info-item-img {
+  flex-grow: 0;
+  display: block;
+  min-width: 56px;
+  height: 56px;
+  margin-right: 24px;
+  border-radius: 28px;
+}
+
+.hancom {
+  background: url(../images/main/info-ico-hancom.svg) no-repeat;
+  background-position: center;
+  background-color: #8a9dff;
+  box-shadow: 0 5px 15px -5px #8a9dff;
+}
+
+.users {
+  background: url(../images/main/info-ico-users.svg) no-repeat;
+  background-position: center;
+  background-color: #4ad1c7;
+  box-shadow: 0 5px 15px -5px #4ad1c7;
+}
+
+.global {
+  background: url(../images/main/info-ico-global.svg) no-repeat;
+  background-position: center;
+  background-color: #ffaf52;
+  box-shadow: 0 5px 15px -5px #ffaf52;
+}
+
+.main-info-item-txt {
+  flex-grow: 1;
+}
+
+.main-info-item-tit {
+  text-align: left;
+  margin-bottom: 7px;
+}
+
+/* section - main story */
+#main-story {
+  position: relative;
+  padding-top: 10%;
+  background-color: #d9de87;
+}
+
+#main-story:before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 44px;
+  width: 50%;
+  height: 320px;
+  padding-top: 140%;
+  background: url(../images/main/movement-bg-tree1@2x.png) no-repeat;
+  background-size: contain;
+  z-index: 2;
+}
+
+#main-story:after {
+  display: block;
+  content: "";
+  position: static;
+  width: 100%;
+  height: 524px;
+  margin-top: -10%;
+  background: url(../images/main/movement-bg-character@2x.png) no-repeat;
+  background-size: 140%;
+  background-position: 66% 0;
+  z-index: 1;
+}
+
+.main-story-wrap {
+  background-color: hsla(0, 0%, 100%, 0.88);
+  border-radius: 10px;
+  box-shadow: 0 8px 15px #c4c480;
+  padding: 24px 24px 30px;
+  z-index: 10;
+}
+
+.main-story-tit {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.main-story-para {
+  margin-bottom: 14px;
+}
+
+.main-story-para:last-child {
+  margin-bottom: 25px;
+}
+
 /* animation */
 @keyframes sideRight {
   0% {
@@ -302,11 +428,25 @@ button:focus {
 /* 반응형 */
 @media screen and (max-width: 574px) {
   /* 말랑 슬라이드 */
+  .malang-wrap {
+    overflow: hidden;
+  }
+  .slide {
+    min-width: 505px;
+    max-width: 2100px;
+    flex-wrap: nowrap;
+  }
+  .malang-img {
+    flex: 1;
+    flex-grow: 1;
+    max-width: 420px;
+  }
 }
 
 @media screen and (min-width: 575px) and (max-width: 868px) {
   .container {
     width: calc(100% - 24px);
+    margin: 0 auto;
   }
   /* main */
   .malang-img {
@@ -396,13 +536,12 @@ button:focus {
   .link-img.red::after {
     background: none;
   }
-
-  /* HEADER */
   .container {
     max-width: 928px;
     height: 100px;
   }
 
+  /* HEADER */
   .header-wrap {
     height: 100%;
   }
@@ -581,12 +720,12 @@ button:focus {
 }
 
 @media screen and (min-width: 1200px) {
-  /* HEADER */
+  /* 일반 */
   .container {
     max-width: 1120px;
     height: 100px;
   }
-
+  /* HEADER */
   .login {
     position: absolute;
     margin-left: 850px;
