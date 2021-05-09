@@ -40,8 +40,6 @@ button:focus {
 
 /* 일반 */
 .sr-only {
-  /* display: none;
-  screen reader도 없는 취급을 한다. */
   position: absolute;
   z-index: -100;
   width: 1px;
@@ -214,7 +212,6 @@ button:focus {
 .gnb-item > .link,
 .quick-item > .link {
   display: block;
-  /* line-height: 1.875; */
   width: auto;
   height: 30px;
   text-align: right;
@@ -390,6 +387,7 @@ button:focus {
   border-radius: 10px;
   box-shadow: 0 8px 15px #c4c480;
   padding: 24px 24px 30px;
+  letter-spacing: -0.002em;
   z-index: 10;
 }
 
@@ -447,9 +445,14 @@ button:focus {
     flex-grow: 1;
     max-width: 420px;
   }
+
+  /* section - main-info */
+  .main-info-wrap {
+    height: auto;
+  }
 }
 
-@media screen and (min-width: 575px) and (max-width: 868px) {
+@media screen and (min-width: 575px) and (max-width: 766px) {
   .container {
     width: calc(100% - 24px);
   }
@@ -457,6 +460,7 @@ button:focus {
   .malang-img {
     height: 542px;
   }
+
   /* section - main-info */
   .main-info-wrap {
     height: 360px;
@@ -591,6 +595,59 @@ button:focus {
 
   .para-br {
     display: none;
+  }
+
+  /* section - main story */
+  #main-story {
+    padding-top: 10%;
+  }
+
+  #main-story:before {
+    left: 0;
+    top: 44px;
+    width: 30%;
+    height: 320px;
+    padding-top: 140%;
+    background: url(../images/main/movement-bg-tree1@2x.png) no-repeat;
+    background-size: contain;
+    z-index: 2;
+  }
+
+  #main-story:after {
+    display: block;
+    content: "";
+    position: static;
+    width: 100%;
+    height: 524px;
+    margin-top: -10%;
+    padding-top: 5%;
+    background: url(../images/main/movement-bg-character@2x.png) no-repeat;
+    background-size: 140%;
+    background-position: 66% 0;
+    z-index: 1;
+  }
+
+  .main-story-wrap {
+    border-radius: 10px;
+    padding: 34px 88px 57px 51px;
+    z-index: 10;
+  }
+
+  .main-story-tit {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  .main-story-tit.fs-Xlarge {
+    font-size: 35px;
+  }
+
+  .main-story-body.fs-small {
+    font-size: 18px;
+  }
+
+  .main-story-para {
+    margin-bottom: 18px;
   }
 }
 
@@ -825,6 +882,66 @@ button:focus {
 
   .para-br2 {
     display: block;
+  }
+
+  /* section - main story */
+  #main-story {
+    padding-top: 10%;
+  }
+
+  #main-story .container {
+    justify-content: flex-end;
+  }
+
+  #main-story:before {
+    left: 0;
+    top: 44px;
+    width: 30%;
+    height: 320px;
+    padding-top: 140%;
+    background: url(../images/main/movement-bg-tree1@2x.png) no-repeat;
+    background-size: contain;
+    z-index: 2;
+  }
+
+  #main-story:after {
+    display: block;
+    content: "";
+    position: static;
+    width: 100%;
+    height: 524px;
+    margin-top: -10%;
+    padding-top: 5%;
+    background: url(../images/main/movement-bg-character@2x.png) no-repeat;
+    background-size: 140%;
+    background-position: 66% 0;
+    z-index: 1;
+  }
+
+  .main-story-wrap {
+    left: 0;
+    width: 544px;
+    height: 476px;
+    padding: 34px 88px 57px 51px;
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  .main-story-tit {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  .main-story-tit.fs-Xlarge {
+    font-size: 35px;
+  }
+
+  .main-story-body.fs-small {
+    font-size: 18px;
+  }
+
+  .main-story-para {
+    margin-bottom: 18px;
   }
 }
 
