@@ -78,7 +78,7 @@
               </ul>
             </nav>
           </div>
-          <div class="side-black" onclick="hamburger()"></div>
+          <div class="side-black"></div>
         </div>
       </div>
     </header>
@@ -148,39 +148,50 @@
     <!-- Swipe -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script>
-      if ($(window).width() >= 574) {
-        var swiper = new Swiper(".mySwiper", {
-          pagination: {
-            el: ".swiper-pagination",
-          },
-        });
-      }
+      // if ($(window).width() >= 574) {
+      //   var swiper = new Swiper(".mySwiper", {
+      //     pagination: {
+      //       el: ".swiper-pagination",
+      //     },
+      //   });
+      // }
 
       // header nav bar show & hide
-
       function hamburger() {
         if ($(".side").hasClass("open") == false) {
           $(".side").css("display", "flex");
           $(".side-black").show();
-          $(".side").addClass("open");
+          $(".side").addClass("side open");
           console.log("open");
         } else if ($(".side").hasClass("open") == true) {
-          $(".side").hide();
+          $(".side").css("display", "none");
           $(".side-black").hide();
           $(".side").removeClass("open");
-          console.log("close");
+          console.log("side close");
         }
       }
 
+      // header nav show 상태에서 window 크기 변화시 .side-black 없애기
       $(window).resize(function () {
-        if ($(window).width() == 992 && $(".side").hasClass("open") == true) {
-          $(".side").hide();
+        if (
+          // side black 메뉴 open 중 웹사이즈 키우면 사라지게 수정
+          $(window).width() >= 991 &&
+          $(".side").hasClass("resize") == false &&
+          $(".side").hasClass("open") == true
+        ) {
           $(".side-black").hide();
-          $(".side").removeClass("open");
+          $(".side").addClass("resize");
+          console.log("window resize close");
+        } else if (
+          $(window).width() <= 990 &&
+          $(".side").hasClass("resize") == true &&
+          $(".side").hasClass("open") == true
+        ) {
+          $(".side-black").show();
+          $(".side").removeClass("resize");
+          console.log("window resize show");
         }
       });
-
-      // side black 메뉴 open 중 웹사이즈 크게하면 사라지게 만들기ㅠㅠㅠㅠ 수정필요
 
       // if ($(window).width() <= "990px") {
       //   $(".side-black").hide();
