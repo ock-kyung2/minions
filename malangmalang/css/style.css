@@ -58,6 +58,7 @@ button:focus {
   display: flex;
   max-width: 708px;
   padding: 0 12px;
+  margin: 0 auto;
 }
 
 .link-img::after {
@@ -345,6 +346,10 @@ button:focus {
   margin-bottom: 7px;
 }
 
+.para-br2 {
+  display: none;
+}
+
 /* section - main story */
 #main-story {
   position: relative;
@@ -373,6 +378,7 @@ button:focus {
   width: 100%;
   height: 524px;
   margin-top: -10%;
+  padding-top: 5%;
   background: url(../images/main/movement-bg-character@2x.png) no-repeat;
   background-size: 140%;
   background-position: 66% 0;
@@ -446,11 +452,36 @@ button:focus {
 @media screen and (min-width: 575px) and (max-width: 868px) {
   .container {
     width: calc(100% - 24px);
-    margin: 0 auto;
   }
   /* main */
   .malang-img {
     height: 542px;
+  }
+  /* section - main-info */
+  .main-info-wrap {
+    height: 360px;
+  }
+
+  .main-info-item-img {
+    flex-grow: 0;
+    display: block;
+    min-width: 56px;
+    height: 56px;
+    margin-right: 24px;
+    border-radius: 28px;
+  }
+
+  .main-info-item-txt {
+    flex-grow: 1;
+  }
+
+  .main-info-item-tit {
+    text-align: left;
+    margin-bottom: 7px;
+  }
+
+  .para-br {
+    display: none;
   }
 }
 
@@ -529,6 +560,38 @@ button:focus {
 
   /* MAIN */
   /* 말랑 슬라이드 해제*/
+  /* section - main-info */
+  .main-info-wrap {
+    height: 368px;
+  }
+
+  .main-info-item {
+    display: flex;
+    margin-bottom: 31px;
+  }
+
+  .main-info-item-img {
+    min-width: 64px;
+    height: 64px;
+    margin-right: 16px;
+    border-radius: 32px;
+  }
+
+  .main-info-item-tit {
+    margin-bottom: 8px;
+  }
+
+  .main-info-item-tit.fs-medium {
+    font-size: 22px;
+  }
+
+  .main-info-item-para.fs-base {
+    font-size: 16px;
+  }
+
+  .para-br {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 991px) {
@@ -538,12 +601,11 @@ button:focus {
   }
   .container {
     max-width: 928px;
-    height: 100px;
   }
 
   /* HEADER */
   .header-wrap {
-    height: 100%;
+    height: 100px;
   }
 
   .logo {
@@ -717,17 +779,115 @@ button:focus {
     display: block;
     content: "산성비";
   }
+
+  /* section - main-info */
+  .main-info-wrap {
+    display: flex;
+    height: 285px;
+  }
+
+  .main-info-item {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .main-info-item {
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
+
+  .main-info-item:last-child {
+    margin-right: 0;
+  }
+
+  .main-info-item-img {
+    min-width: 64px;
+    height: 64px;
+    margin-right: 16px;
+    border-radius: 32px;
+  }
+
+  .main-info-item-txt {
+    width: 208px;
+  }
+
+  .main-info-item-tit {
+    margin-bottom: 8px;
+  }
+
+  .main-info-item-tit.fs-medium {
+    font-size: 22px;
+  }
+
+  .main-info-item-para.fs-small {
+    font-size: 16px;
+  }
+
+  .para-br2 {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   /* 일반 */
   .container {
     max-width: 1120px;
+  }
+
+  .header-wrap {
     height: 100px;
   }
+
   /* HEADER */
   .login {
     position: absolute;
     margin-left: 850px;
+  }
+
+  /* section - main-info */
+  .main-info-wrap {
+    display: flex;
+    justify-content: space-between;
+    height: 227px;
+  }
+
+  .main-info-item {
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
+
+  .main-info-item:last-child {
+    margin-right: 0;
+  }
+
+  .main-info-item-img {
+    min-width: 64px;
+    height: 64px;
+    margin-right: 16px;
+    border-radius: 32px;
+  }
+
+  .main-info-item-txt {
+    width: auto;
+  }
+
+  .main-info-item-tit {
+    margin-bottom: 8px;
+  }
+
+  .main-info-item-tit.fs-medium {
+    font-size: 22px;
+  }
+
+  .main-info-item-para.fs-small {
+    font-size: 16px;
+  }
+
+  .para-br2 {
+    display: block;
+  }
+
+  .main-info-item-tit > .para-br2 {
+    display: none;
   }
 }
