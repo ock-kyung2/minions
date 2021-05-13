@@ -1,7 +1,7 @@
 /* font famaily */
 body {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* font size */
@@ -12,7 +12,7 @@ body {
 
 .fs-small {
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 .fs-base {

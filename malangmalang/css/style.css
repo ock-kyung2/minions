@@ -81,10 +81,13 @@ button:focus {
   width: 160px;
   height: 40px;
   padding-right: 15px;
-  margin-top: 10px;
   background-color: #ffffff;
   box-shadow: 0 8px 15px rgb(114 124 142 / 36%);
   border-radius: 20px;
+}
+
+.btn_detail a {
+  display: block;
 }
 
 .btn_detail::after {
@@ -128,7 +131,6 @@ button:focus {
   display: block;
   width: 56px;
   height: 46px;
-  margin-left: 12px;
   background: url(../images/header/logo-malangmalang.png) no-repeat;
   background-size: contain;
   overflow: hidden;
@@ -143,8 +145,8 @@ button:focus {
   align-items: center;
   width: 43px;
   height: 43px;
-  font-size: 40px;
-  margin: 12px;
+  font-size: 43px;
+  margin: 12px 0 12px 12px;
 }
 
 .side {
@@ -352,7 +354,10 @@ button:focus {
   position: relative;
   padding-top: 10%;
   background-color: #d9de87;
+  width: 100%;
 }
+
+/* main story 높이 조절ㅠㅠㅠ */
 
 #main-story:before {
   display: block;
@@ -371,12 +376,14 @@ button:focus {
 #main-story:after {
   display: block;
   content: "";
-  position: static;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
   width: 100%;
-  height: 524px;
-  margin-top: -10%;
-  padding-top: 5%;
+  /* margin-top: -10%;
+  padding-top: 15%; */
   background: url(../images/main/movement-bg-character@2x.png) no-repeat;
+  background-size: contain;
   background-size: 140%;
   background-position: 66% 0;
   z-index: 1;
@@ -402,6 +409,62 @@ button:focus {
 
 .main-story-para:last-child {
   margin-bottom: 25px;
+}
+
+/* section -play */
+#main-play {
+  background-color: #f5f6f8;
+}
+
+#main-play-wrap {
+  width: 100%;
+  height: auto;
+  padding: 70px 0 42px;
+}
+
+#main-play-tit {
+  margin-bottom: 8.2px;
+}
+
+#play-para {
+  text-align: center;
+}
+
+#main-play-list {
+  width: 100%;
+  margin-top: 42px;
+}
+
+.main-play-item {
+  width: 100%;
+  padding-bottom: 24px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.main-play-item:first-child {
+  margin-bottom: 24px;
+}
+
+.main-play-item > h3 {
+  margin: 8px 0 13px;
+}
+
+#main-play-img {
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background: linear-gradient(232deg, #34ff92, #4694ff);
+}
+
+#main-play-img img {
+  display: block;
+  /* height: 100%; */
+  float: left;
+}
+
+.go-btn {
+  margin: 0 auto;
 }
 
 /* animation */
@@ -456,6 +519,7 @@ button:focus {
   .container {
     width: calc(100% - 24px);
   }
+
   /* main */
   .malang-img {
     height: 542px;
@@ -491,7 +555,6 @@ button:focus {
 
 @media screen and (min-width: 767px) and (max-width: 990px) {
   /* HEADER */
-
   /* side name 가로 배치 */
   .side {
     align-items: center;
@@ -598,7 +661,7 @@ button:focus {
   }
 
   /* section - main story */
-  #main-story {
+  /* #main-story {
     padding-top: 10%;
   }
 
@@ -648,7 +711,7 @@ button:focus {
 
   .main-story-para {
     margin-bottom: 18px;
-  }
+  } */
 }
 
 @media screen and (min-width: 991px) {
@@ -885,7 +948,7 @@ button:focus {
   }
 
   /* section - main story */
-  #main-story {
+  /* #main-story {
     padding-top: 10%;
   }
 
@@ -942,7 +1005,7 @@ button:focus {
 
   .main-story-para {
     margin-bottom: 18px;
-  }
+  } */
 }
 
 @media screen and (min-width: 1200px) {

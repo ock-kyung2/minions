@@ -28,7 +28,7 @@
     <script src="../malangmalang/js/jquery-3.4.1.min.js"></script>
   </head>
   <body>
-    <header id="header" class="text-primary">
+    <header id="header" class="fs-base text-primary">
       <div class="container">
         <div class="header-wrap">
           <h1 class="logo">
@@ -58,7 +58,7 @@
                 </li>
               </ul>
             </nav>
-            <nav class="quick-nav">
+            <nav class="quick-nav fs-base">
               <ul class="quick-list text-m-quick">
                 <li class="quick-item hidden">
                   <a href="#" class="link">한컴타자</a>
@@ -78,7 +78,7 @@
               </ul>
             </nav>
           </div>
-          <div class="side-black"></div>
+          <div class="side-black" onclick="hamburger()"></div>
         </div>
       </div>
     </header>
@@ -192,6 +192,7 @@
           </div>
         </div>
       </section>
+      <!-- Section main-story -->
       <section id="main-story">
         <div class="container">
           <div class="main-story-wrap text-primary">
@@ -213,25 +214,51 @@
                 말랑말랑무브먼트를 즐길 수 있어요!
               </p>
             </div>
-            <button class="btn_detail fs-tiny fw-Medium text-secondary">
-              자세히 보기
-            </button>
+            <div class="btn_detail fs-tiny fw-Medium text-secondary">
+              <a> 자세히 보기 </a>
+            </div>
           </div>
         </div>
       </section>
       <section id="main-play">
         <div class="container">
-          <div class="main-play-wrap">
-            <h2>말랑말랑 Play!</h2>
-            <p>
-              말랑말랑무브먼트 캐릭터 친구들과 함께 한컴타자와 다양한 아케이드
-              게임으로 출발해볼까요?
+          <div id="main-play-wrap">
+            <h2 id="main-play-tit" class="fs-play">말랑말랑 Play!</h2>
+            <p id="play-para">
+              말랑말랑무브먼트 캐릭터 친구들과 함께 <br />
+              한컴타자와 다양한 아케이드 게임으로 <br />출발해볼까요?
             </p>
-            <div></div>
-            <div></div>
+            <div id="main-play-list">
+              <div class="main-play-item">
+                <div id="main-play-img">
+                  <img
+                    src="../malangmalang/images/main/play-thumb-taja@2x.png"
+                    alt="한컴 타자연습"
+                  />
+                </div>
+                <h3 class="fs-medium fw-regular">한컴타자</h3>
+                <div class="go-btn btn_detail fs-tiny fw-Medium text-secondary">
+                  <a> 바로가기 </a>
+                </div>
+              </div>
+              <div class="main-play-item">
+                <div id="main-play-img">
+                  <img
+                    src="../malangmalang/images/main/play-thumb-con@2x.png"
+                    alt="말랑말랑 콘텐츠"
+                  />
+                </div>
+                <h3 class="fs-medium fw-regular">말랑말랑 콘텐츠</h3>
+                <div class="go-btn btn_detail fs-tiny fw-Medium text-secondary">
+                  <a> 바로가기 </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      <aside id="notice"></aside>
+      <footer></footer>
     </main>
     <!-- Swipe -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
@@ -244,7 +271,7 @@
       //   });
       // }
 
-      // header nav bar show & hide
+      //햄버거 버튼 header nav bar show & hide
       function hamburger() {
         if ($(".side").hasClass("open") == false) {
           $(".side").css("display", "flex");
