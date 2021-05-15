@@ -535,6 +535,124 @@ header .btn-partnership {
 }
 /* MAIN -END  */
 
+/* footer */
+#footer-1 {
+  background-color: #f5f6f8;
+  padding: 19px 0 24px;
+}
+
+#footer-1-wrap {
+  flex-direction: column;
+  width: 100%;
+}
+
+#footer-nav {
+  display: block;
+  column-count: 2;
+  width: 100%;
+  height: auto;
+  margin-bottom: 34px;
+}
+
+.footer-nav-item {
+  width: 100%;
+}
+
+.footer-nav-item a {
+  display: block;
+  text-align: left;
+  margin-bottom: 12.33333px;
+}
+
+#family-site {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 38px;
+  padding: 0 16px;
+  background-color: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+}
+
+#family-site-tit {
+  display: block;
+  position: relative;
+  line-height: 38px;
+  text-align: left;
+}
+
+#family-site::after {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/footer/family-site-button-ico.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#footer-2 {
+  background-color: #242424;
+  padding: 26px 0 34px;
+}
+
+#footer-2-wrap {
+  width: 100%;
+}
+#copyright {
+  width: 100%;
+  margin-bottom: 24px;
+  font-style: normal;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+#copyright > span {
+  display: inline-block;
+  padding-left: 12px;
+  position: relative;
+  left: -10px;
+}
+
+#copyright > span::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  height: 10px;
+  border-left: 1px solid #9e9e9e;
+}
+
+#hancom-sns {
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
+  height: 32px;
+}
+
+.sns-item a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.facebook {
+  background-image: url(../images/footer/sns-group-ico-facebook.svg);
+}
+
+.instagram {
+  background-image: url(../images/footer/sns-group-ico-instagram.svg);
+}
+
+.youtube {
+  background-image: url(../images/footer/sns-group-ico-youtube.svg);
+}
+
 /* animation */
 @keyframes sideRight {
   0% {
