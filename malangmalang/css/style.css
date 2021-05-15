@@ -440,6 +440,7 @@ button:focus {
   padding-bottom: 24px;
   background-color: #ffffff;
   border-radius: 10px;
+  box-shadow: 4px 4px 14px #ececec;
 }
 
 .main-play-item:first-child {
@@ -451,16 +452,20 @@ button:focus {
 }
 
 #main-play-img {
-  height: 100%;
+  width: 100%;
+  height: 55vw;
   margin: 0 auto;
-  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
   background: linear-gradient(232deg, #34ff92, #4694ff);
+  overflow: hidden;
 }
 
 #main-play-img img {
   display: block;
-  /* height: 100%; */
-  float: left;
+  position: absolute;
+  left: -17%;
+  height: 100%;
 }
 
 .go-btn {
