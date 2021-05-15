@@ -73,7 +73,17 @@ button:focus {
   background: url(../images/common/ico-link-blank-red.svg) no-repeat;
 }
 
-.btn_detail {
+.btn-partnership {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #ff6969;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px -5px #ff6969;
+}
+
+.btn-detail {
   position: relative;
   display: flex;
   justify-content: center;
@@ -86,11 +96,11 @@ button:focus {
   border-radius: 20px;
 }
 
-.btn_detail a {
+.btn-detail a {
   display: block;
 }
 
-.btn_detail::after {
+.btn-detail::after {
   display: block;
   content: "";
   position: absolute;
@@ -211,40 +221,30 @@ button:focus {
   height: 118px;
 }
 
-.gnb-item > .link,
-.quick-item > .link {
+.gnb-item > a,
+.quick-item > a {
   display: block;
   width: auto;
   height: 30px;
   text-align: right;
+  line-height: 30px;
 }
 
-.gnb-item:last-child {
-  position: relative;
-  height: 50px;
-}
-
-.gnb-item:last-child .link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header .btn-partnership {
   width: 160px;
   height: 40px;
   margin-top: 10px;
   padding-right: 19px;
-  background-color: #ff6969;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px -5px #ff6969;
 }
 
-.gnb-item:last-child .link::after {
+.btn-partnership a::after {
   display: block;
   content: "";
   position: absolute;
   right: 9px;
+  top: 7px;
   width: 26px;
   height: 26px;
-  text-indent: -9999px;
   background: url(../images/header/gnb-ico-arrow.svg) no-repeat;
   background-size: contain;
 }
@@ -411,7 +411,7 @@ button:focus {
   margin-bottom: 25px;
 }
 
-/* section -play */
+/* section - play */
 #main-play {
   background-color: #f5f6f8;
 }
@@ -471,6 +471,69 @@ button:focus {
 .go-btn {
   margin: 0 auto;
 }
+
+/* section - partnership */
+
+#main-partnership {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: #6f8afc;
+  background-image: url(../images/common/partnership-bg-cloud1.svg),
+    url(../images/common/partnership-bg-cloud2.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 445px auto, 445px auto;
+  background-position: left -300px bottom -8px, right -300px bottom -8px;
+}
+
+#main-partnership::before {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15px;
+  background-color: #f5f6f8;
+  z-index: 5;
+}
+#main-partnership::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 170px;
+  background: url(../images/common/partnership-bg-character@2x.png) no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  z-index: 10;
+}
+
+#main-partnership-wrap {
+  width: 100%;
+  padding: 49px 0 0;
+  margin: 0 auto 15px;
+}
+
+#main-partnership-tit {
+  margin-bottom: 16.8px;
+}
+
+#main-partnership-para {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#main-partnership .btn-partnership {
+  width: 248px;
+  height: 46px;
+  margin: 0 auto;
+}
+
+#main-partnership .btn-partnership a::after {
+  top: 10px;
+}
+/* MAIN -END  */
 
 /* animation */
 @keyframes sideRight {
