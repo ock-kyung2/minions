@@ -225,8 +225,9 @@
           <div id="main-play-wrap" class="text-primary">
             <h2 id="main-play-tit" class="fs-play fw-Medium">말랑말랑 Play!</h2>
             <p id="play-para">
-              말랑말랑무브먼트 캐릭터 친구들과 함께 <br />
-              한컴타자와 다양한 아케이드 게임으로 <br />출발해볼까요?
+              말랑말랑무브먼트 캐릭터 친구들과 함께 <br class="play-br" />
+              한컴타자와 다양한 아케이드 게임으로
+              <br class="play-br" />출발해볼까요?
             </p>
             <div id="main-play-list">
               <div class="main-play-item">
@@ -236,9 +237,13 @@
                     alt="한컴 타자연습"
                   />
                 </div>
-                <h3 class="fs-medium fw-regular">한컴타자</h3>
-                <div class="go-btn btn-detail fs-tiny fw-Medium text-secondary">
-                  <a> 바로가기 </a>
+                <div class="main-play-item-txt">
+                  <h3 class="fs-medium fw-regular">한컴타자</h3>
+                  <div
+                    class="go-btn btn-detail fs-tiny fw-Medium text-secondary"
+                  >
+                    <a> 바로가기 </a>
+                  </div>
                 </div>
               </div>
               <div class="main-play-item">
@@ -248,9 +253,13 @@
                     alt="말랑말랑 콘텐츠"
                   />
                 </div>
-                <h3 class="fs-medium fw-regular">말랑말랑 콘텐츠</h3>
-                <div class="go-btn btn-detail fs-tiny fw-Medium text-secondary">
-                  <a> 바로가기 </a>
+                <div class="main-play-item-txt">
+                  <h3 class="fs-medium fw-regular">말랑말랑 콘텐츠</h3>
+                  <div
+                    class="go-btn btn-detail fs-tiny fw-Medium text-secondary"
+                  >
+                    <a> 바로가기 </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -406,7 +415,7 @@
       $(window).resize(function () {
         if (
           // side black 메뉴 open 중 웹사이즈 키우면 사라지게 수정
-          $(window).width() >= 991 &&
+          $(window).width() >= 973 &&
           $(".side").hasClass("resize") == false &&
           $(".side").hasClass("open") == true
         ) {
@@ -414,7 +423,7 @@
           $(".side").addClass("resize");
           console.log("window resize close");
         } else if (
-          $(window).width() <= 990 &&
+          $(window).width() < 973 &&
           $(".side").hasClass("resize") == true &&
           $(".side").hasClass("open") == true
         ) {
@@ -423,13 +432,13 @@
           console.log("window resize show");
         } else if (
           // 햄버거 바 side 닫기 후 웹사이즈 키울때 nav 사라짐 수정
-          $(window).width() >= 991 &&
+          $(window).width() >= 973 &&
           $(".side").hasClass("open") == false
         ) {
           $(".side").css("display", "flex");
           console.log(">= 991 nav show");
         } else if (
-          $(window).width() <= 990 &&
+          $(window).width() < 973 &&
           $(".side").hasClass("open") == false
         ) {
           $(".side").css("display", "none");
