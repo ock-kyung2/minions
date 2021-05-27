@@ -361,7 +361,7 @@ header .btn-partnership {
 
 #main-story:before {
   display: block;
-  content: "";
+  /* content: ""; */
   position: absolute;
   left: 0;
   top: 44px;
@@ -550,13 +550,7 @@ header .btn-partnership {
 #footer-nav {
   display: block;
   column-count: 2;
-  width: 100%;
-  height: auto;
   margin-bottom: 34px;
-}
-
-.footer-nav-item {
-  width: 100%;
 }
 
 .footer-nav-item a {
