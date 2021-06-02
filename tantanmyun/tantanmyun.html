@@ -5,27 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>탄탄면공방</title>
+    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="images/common/favicon.ico"
       type="image/x-icon"
     />
+    <!-- CSS Reset -->
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.csss" />
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- javaScript 3.4.1 -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="wrap">
       <header>
         <div id="in-header">
-          <h1><a href="">탄탄면공방</a></h1>
-          <nav>
-            <h2>탄탄면공방 웹페이지 메뉴</h2>
-            <ul>
+          <h1 id="logo"><a href="#">탄탄면공방</a></h1>
+          <nav id="menu-wrap">
+            <h2 class="sr-only">탄탄면공방 웹페이지 메뉴</h2>
+            <ul id="menu">
               <li><a href="#">브랜드</a></li>
               <li><a href="#">메뉴소개</a></li>
               <li><a href="#">매장안내</a></li>
               <li><a href="#">고객지원</a></li>
-              <li><a href="#">창업페이지</a></li>
+              <li id="startUp"><a href="#">창업페이지</a></li>
             </ul>
           </nav>
         </div>
@@ -33,14 +42,14 @@
       <!-- header End -->
       <main>
         <section id="section1">
-          <h2>끝까지 먹어도 맛있는 한그릇</h2>
+          <h2 class="sr-only">끝까지 먹어도 맛있는 한그릇</h2>
           <div id="video-wrap" aria-hidden="true">
-            <video></video>
-            <video></video>
-            <video></video>
-            <video></video>
+            <video src="video/mv1_video1.mp4" muted autoplay loop></video>
+            <video src="video/mv1_video2.mp4" muted autoplay loop></video>
+            <video src="video/mv1_video3.mp4" muted autoplay loop></video>
           </div>
         </section>
+
         <section id="section2">
           <h2>국내유일,국내최초의 탄탄면공방</h2>
           <div>
@@ -79,7 +88,7 @@
             </div>
           </div>
         </section>
-        <section>
+        <!-- <section>
           <h2>탄탄면공방만의 서비스</h2>
           <div><h3>달항아리 사기그릇</h3></div>
           <div><h3>밀키트 포장서비스</h3></div>
@@ -192,9 +201,9 @@
               </tr>
             </tbody>
           </table>
-        </aside>
+        </aside>-->
       </main>
-      <footer>
+      <!-- <footer>
         <div>
           <ul>
             <li><a href="#">개인정보처리방침</a></li>
@@ -226,7 +235,34 @@
             <li><a href="#"></a></li>
           </ul>
         </div>
-      </footer>
+      </footer> -->
     </div>
+    <script>
+      // $(window).ready(function () {
+      //   $("#in-header").removeClass("fixed");
+      //   $("#logo").removeClass("fixed");
+
+      //   if ($(window).scrollTop() != 0) {
+      //     $("#in-header").addClass("fixed");
+      //     $("#logo").addClass("fixed");
+      //   }
+      $(window).scroll(function () {
+        if (
+          $(window).scrollTop() >= 55 &&
+          $("#in-header").hasClass("fixed") == false
+        ) {
+          $("#in-header").addClass("fixed");
+          $("#logo").addClass("fixed");
+          console.log("menu addClass");
+        } else if (
+          $(window).scrollTop() < 55 &&
+          $("#in-header").hasClass("fixed") == true
+        ) {
+          $("#in-header").removeClass("fixed");
+          $("#logo").removeClass("fixed");
+          console.log("menu removeClass");
+        }
+      });
+    </script>
   </body>
 </html>
