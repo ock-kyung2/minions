@@ -11,6 +11,14 @@
   opacity: 0;
 }
 
+/* 공통 */
+.text {
+  font-size: 18px;
+  line-height: 177%;
+  letter-spacing: -0.025em;
+  color: #6f6967;
+}
+
 /* Header */
 header {
   position: relative;
@@ -280,12 +288,8 @@ header {
   font-weight: 900px;
 }
 
-.brand-info-desc > p {
+.brand-info-desc > .text {
   padding: 17px 0 33px;
-  font-size: 18px;
-  line-height: 177%;
-  letter-spacing: -0.025em;
-  color: #6f6967;
 }
 
 /* #brand-info-img-wrap {
@@ -302,7 +306,6 @@ header {
 #brand-mv-wrap {
   width: 650px;
   height: 486px;
-  /* transform: translateY(9.5px); */
 }
 
 .go-btn {
@@ -312,7 +315,7 @@ header {
   width: 170px;
   height: 50px;
   color: #daa800;
-  border: 1px solid #daa800;
+  border: 1px solid #ffcf31;
   border-radius: 25px;
   transition-duration: 0.2s;
 }
@@ -333,10 +336,98 @@ header {
 }
 
 .go-btn:hover {
-  background-color: #daa800;
-  color: black;
+  background-color: #ffcf31;
+  color: #000000;
 }
 
 .go-btn:hover::after {
   background: url(../images/common/cmn_link1_arr2.png) no-repeat 100% 50%;
+}
+
+/* Section02 brand info End */
+
+#section3 {
+  width: 100%;
+  height: 1000px;
+}
+
+#section3-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  min-width: 1260px;
+}
+
+#section3-wrap > .go-btn {
+  background-color: #ffcf31;
+  color: black;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#section3-wrap > .go-btn::after {
+  background-color: #ffcf31;
+  background: url(../images/common/cmn_link1_arr2.png) no-repeat 100% 50%;
+  color: black;
+}
+
+.section3-con {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 100px 80px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#conLeft {
+  background-color: #dad6ca;
+}
+
+#conRight {
+  background-color: #f6f5ef;
+  align-items: flex-end;
+}
+
+.con-img {
+  position: absolute;
+  top: 250px;
+}
+
+#conLeft-img {
+  left: 50px;
+}
+
+#conRight-img {
+  right: 50px;
+}
+
+.bittle {
+  width: auto;
+  height: 218px;
+}
+
+.con-desc {
+  display: flex;
+}
+
+#conLeft-desc {
+  align-items: flex-end;
+}
+
+#conRight-desc {
+  align-items: flex-start;
+  text-align: right;
+}
+
+#conLeft-desc > p {
+  margin-left: 40px;
+}
+
+#conRight-desc > p {
+  margin-right: 40px;
 }
