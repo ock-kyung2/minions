@@ -42,16 +42,31 @@
       <!-- header End -->
       <main>
         <section id="section1">
-          <h2 class="sr-only">끝까지 먹어도 맛있는 한그릇</h2>
           <div id="video-wrap" aria-hidden="true">
             <video src="video/mv1_video1.mp4" muted autoplay loop></video>
             <video src="video/mv1_video2.mp4" muted autoplay loop></video>
             <video src="video/mv1_video3.mp4" muted autoplay loop></video>
+            <div id="video-shadow"></div>
+            <div id="video-food">
+              <img src="images/main/mv1_food.png" alt="" />
+              <div id="video-smoke">
+                <img src="images/main/mv1_smoke.png" alt="" />
+              </div>
+            </div>
+            <div id="section1-des">
+              <h2 class="sr-only">끝까지 먹어도 맛있는 한그릇</h2>
+              <img src="images/main/mv1_title_20210118.png" alt="" />
+              <span class="details">자세히 보기</span>
+            </div>
+          </div>
+          <div id="scroll-wrap">
+            <div id="scroll-bar"></div>
+            <p>scroll</p>
           </div>
         </section>
 
         <section id="section2">
-          <h2>국내유일,국내최초의 탄탄면공방</h2>
+          <h2 class="sr-only">국내유일,국내최초의 탄탄면공방</h2>
           <div>
             <div><img src="" alt="국내유일" /></div>
             <h3>탄탄면의 전문화</h3>
@@ -238,14 +253,6 @@
       </footer> -->
     </div>
     <script>
-      // $(window).ready(function () {
-      //   $("#in-header").removeClass("fixed");
-      //   $("#logo").removeClass("fixed");
-
-      //   if ($(window).scrollTop() != 0) {
-      //     $("#in-header").addClass("fixed");
-      //     $("#logo").addClass("fixed");
-      //   }
       $(window).scroll(function () {
         if (
           $(window).scrollTop() >= 55 &&
