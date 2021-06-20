@@ -60,6 +60,10 @@ header {
   height: 100%;
 }
 
+#menu > li > a {
+  display: block;
+}
+
 #startUp {
   background-color: black;
   border-radius: 25px;
@@ -115,6 +119,9 @@ header {
   min-width: 1000px;
   height: 749px;
   overflow: hidden;
+  background-image: url(../images/main/mv1_bg_20210112.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #video-wrap > video {
@@ -209,4 +216,127 @@ header {
   margin-bottom: 20px;
 }
 
-/* Section1 End */
+/* Section1 main video End */
+
+#section2 {
+  width: 100%;
+  height: 1850px;
+}
+
+#section2 .container {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 167px 0 137px 0;
+  min-width: 1260px;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.97),
+      rgba(255, 255, 255, 0.97)
+    ),
+    url(../images/main/tantan_bi.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.brand-info-wrap {
+  width: 100%;
+  height: 505px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-info-wrap:nth-of-type(1) {
+  align-items: unset;
+}
+
+.brand-info {
+  display: flex;
+  width: auto;
+  height: 222px;
+  margin-left: 30px;
+}
+
+#brand-info02 {
+  margin: 120px 30px 0 0;
+}
+
+#brand-desc01,
+#brand-desc03 {
+  margin-left: 40px;
+}
+
+#brand-desc02 {
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.brand-info-desc > h3 {
+  font-size: 25px;
+  font-weight: 900px;
+}
+
+.brand-info-desc > p {
+  padding: 17px 0 33px;
+  font-size: 18px;
+  line-height: 177%;
+  letter-spacing: -0.025em;
+  color: #6f6967;
+}
+
+/* #brand-info-img-wrap {
+} */
+
+#brand-img01 {
+  transform: translateY(-30px);
+}
+
+#brand-img02 {
+  transform: translateY(-63px);
+}
+
+#brand-mv-wrap {
+  width: 650px;
+  height: 486px;
+  /* transform: translateY(9.5px); */
+}
+
+.go-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 50px;
+  color: #daa800;
+  border: 1px solid #daa800;
+  border-radius: 25px;
+  transition-duration: 0.2s;
+}
+
+.go-btn::after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 50px;
+  background: url(../images/common/cmn_link1_arr1.png) no-repeat 100% 50%;
+  transition-duration: 0.5s;
+}
+
+.go-btn > a {
+  line-height: 50px;
+  text-align: center;
+  margin-right: 19px;
+}
+
+.go-btn:hover {
+  background-color: #daa800;
+  color: black;
+}
+
+.go-btn:hover::after {
+  background: url(../images/common/cmn_link1_arr2.png) no-repeat 100% 50%;
+}

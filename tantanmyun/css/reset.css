@@ -4,13 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "NotoSansKR-Regular";
+}
+
 ul,
 li {
   list-style: none;
 }
 
 a {
-  display: block;
   text-decoration: none;
   color: inherit;
 }
