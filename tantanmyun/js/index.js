@@ -18,6 +18,26 @@ $(window).ready(function(){
       $("#logo").removeClass("fixed");
       console.log("menu removeClass");
     }
+
+    // section3 라면 이미지 scroll시 scale left 변화
+    var SectionTop = $("#section3").position().top;
+    
+    if($(window).scrollTop() >= SectionTop && $("#con-img").hasClass("conImg")==false){
+      $("#conLeft-img").css({
+        left:"50%",
+        transform:"translateX(-58%)"
+      });
+
+      $("#conRight-img").css({
+        right:"50%",
+        transform:"translateX(58%)"
+      });
+      
+
+      $(".con-img").addClass("conImg");
+    
+      console.log("con-img")
+    }
   });
   
   // section1 video shadow animate
@@ -35,7 +55,7 @@ $(window).ready(function(){
     opacity:1
   });
 
-  // 
+  // Section01 food img animate
   $("#video-food").delay(1700).animate({
     bottom: "-150px",
     opacity:1

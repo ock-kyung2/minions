@@ -165,8 +165,8 @@ header {
 .video-smoke {
   position: absolute;
   left: 46px;
-  top: 0;
-  opacity: 0;
+  top: -150px;
+  opacity: 0.5;
 }
 
 #section1-des {
@@ -484,9 +484,10 @@ header {
 #conLeft-img {
   position: absolute;
   top: 246px;
-  left: 50%;
-  transform: translateX(-58%);
+  left: 6%;
   z-index: 5;
+  transform: scale(1.2);
+  transition-duration: 1s;
 }
 
 #conLeft-img > img {
@@ -496,7 +497,8 @@ header {
 #conRight-img {
   position: absolute;
   top: 230px;
-  right: 50%;
-  transform: translateX(58%);
+  right: -6%;
+  transform: scale(1.2);
+  transition-duration: 1s;
   z-index: 5;
 }
