@@ -354,7 +354,7 @@ header {
 #section3-wrap {
   width: 100%;
   height: 100%;
-  display: flex;
+  /* display: flex; */
   position: relative;
   min-width: 1260px;
 }
@@ -374,60 +374,94 @@ header {
   color: black;
 }
 
-.section3-con {
-  width: 75%;
+.con-wrap {
+  position: absolute;
+  width: 50%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 100px 80px;
-  font-family: "Noto Sans KR", sans-serif;
+  overflow: hidden;
 }
 
-#conLeft {
+#conLeft-wrap {
+  left: 0;
   background-color: #dad6ca;
 }
 
-#conRight {
+#conRight-wrap {
+  right: 0;
   background-color: #f6f5ef;
-  align-items: flex-end;
 }
 
-.con-img {
+.con {
   position: absolute;
-  top: 250px;
+  top: 0;
+  width: 200%;
+  height: 100%;
 }
 
-#conLeft-img {
-  left: 50px;
+#conLeft {
+  left: 0;
 }
 
-#conRight-img {
-  right: 50px;
+#conRight {
+  right: 0;
 }
 
 .bittle {
-  width: auto;
-  height: 218px;
+  width: 34%;
 }
 
-.con-desc {
-  display: flex;
+.bittle > img {
+  width: 100%;
+}
+
+#conLeft > .bittle {
+  position: absolute;
+  top: 100px;
+  left: 90px;
+}
+
+#conRight > .bittle {
+  position: absolute;
+  bottom: 100px;
+  right: 90px;
 }
 
 #conLeft-desc {
+  display: flex;
   align-items: flex-end;
-}
-
-#conRight-desc {
-  align-items: flex-start;
-  text-align: right;
+  position: absolute;
+  bottom: 100px;
+  left: 90px;
 }
 
 #conLeft-desc > p {
   margin-left: 40px;
 }
 
+#conRight-desc {
+  display: flex;
+  position: absolute;
+  top: 100px;
+  right: 90px;
+  text-align: right;
+}
+
 #conRight-desc > p {
   margin-right: 40px;
+}
+
+#conLeft-img {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-42%);
+  z-index: 30;
+}
+
+#conRight-img {
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  transform: translateX(-42%);
+  z-index: 30;
 }
