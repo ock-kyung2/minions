@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <!-- CSS Style -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animation.css" />
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -57,14 +58,19 @@
             <div id="video-shadow"></div>
             <div id="video-food">
               <img src="images/main/mv1_food.png" alt="" />
-              <div id="video-smoke">
+              <div id="smoke01" class="video-smoke">
+                <img src="images/main/mv1_smoke.png" alt="" />
+              </div>
+              <div id="smoke02" class="video-smoke">
                 <img src="images/main/mv1_smoke.png" alt="" />
               </div>
             </div>
             <div id="section1-des">
               <h2 class="sr-only">끝까지 먹어도 맛있는 한그릇</h2>
               <img src="images/main/mv1_title_20210118.png" alt="" />
-              <span class="details">자세히 보기</span>
+              <a class="details">
+                <span>자세히 보기</span>
+              </a>
             </div>
           </div>
           <div id="scroll-wrap">
@@ -200,7 +206,7 @@
           </div>
         </section>
         <!-- Section3 End -->
-        <!--<section>
+        <section>
           <h2>탄탄면공방 SNS</h2>
           <div>
             <p>
@@ -225,7 +231,7 @@
             <div><img src="" alt="" /></div>
           </div>
         </section>
-        <aside>
+        <!--<aside>
           <h2>탄탄면공방 소식</h2>
           <table>
             <thead>

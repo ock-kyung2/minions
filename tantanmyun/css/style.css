@@ -125,7 +125,7 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   min-width: 1000px;
-  height: 749px;
+  height: 80vh;
   overflow: hidden;
   background-image: url(../images/main/mv1_bg_20210112.jpg);
   background-repeat: no-repeat;
@@ -151,30 +151,40 @@ header {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.5;
-}
-#video-food {
-  position: absolute;
-  bottom: -140px;
-  left: 50%;
-  transform: translateX(-20%);
+  opacity: 0;
 }
 
-#video-smoke {
+#video-food {
+  position: absolute;
+  bottom: -800px;
+  left: 50%;
+  transform: translateX(-20%);
+  opacity: 0;
+}
+
+.video-smoke {
   position: absolute;
   left: 46px;
   top: 0;
+  opacity: 0;
 }
 
 #section1-des {
   position: absolute;
-  top: 320px;
+  bottom: 170px;
   left: 150px;
   z-index: 10;
 }
 
 #section1-des > img {
   margin-bottom: 50px;
+  margin-left: 50px;
+  opacity: 0;
+}
+
+#section1-des > .details {
+  margin-left: 50px;
+  opacity: 0;
 }
 
 .details {
@@ -184,9 +194,16 @@ header {
   color: #ffffff;
   font-size: 16px;
   letter-spacing: -0.025em;
-  line-height: 50px;
-  padding-right: 26px;
   text-align: center;
+}
+
+.details > span {
+  display: inline-block;
+  padding-right: 26px;
+  line-height: 50px;
+  background-image: url(../images/common/cmn_link1_arr3.png);
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .details::before {
@@ -198,9 +215,13 @@ header {
   width: 50px;
   height: 50px;
   background-color: #ffcf31;
-  border-radius: 50%;
+  border-radius: 25px;
   z-index: -5;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
+}
+
+.details:hover::before {
+  width: 100%;
 }
 
 #scroll-wrap {
@@ -354,7 +375,6 @@ header {
 #section3-wrap {
   width: 100%;
   height: 100%;
-  /* display: flex; */
   position: relative;
   min-width: 1260px;
 }
@@ -366,6 +386,7 @@ header {
   bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 15;
 }
 
 #section3-wrap > .go-btn::after {
@@ -379,6 +400,9 @@ header {
   width: 50%;
   height: 100%;
   overflow: hidden;
+  z-index: 10;
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.76, 0.01, 0.25, 0.99);
 }
 
 #conLeft-wrap {
@@ -394,8 +418,9 @@ header {
 .con {
   position: absolute;
   top: 0;
-  width: 200%;
+  width: 100vw;
   height: 100%;
+  min-width: 1260px;
 }
 
 #conLeft {
@@ -452,16 +477,20 @@ header {
 
 #conLeft-img {
   position: absolute;
-  top: 250px;
+  top: 246px;
   left: 50%;
-  transform: translateX(-42%);
-  z-index: 30;
+  transform: translateX(-58%);
+  z-index: 5;
+}
+
+#conLeft-img > img {
+  margin-right: -150px;
 }
 
 #conRight-img {
   position: absolute;
   top: 230px;
-  left: 50%;
-  transform: translateX(-42%);
-  z-index: 30;
+  right: 50%;
+  transform: translateX(58%);
+  z-index: 5;
 }
