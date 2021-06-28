@@ -22,7 +22,7 @@ $(window).ready(function(){
     // section3 라면 이미지 scroll시 scale left 변화
     var SectionTop = $("#section3").position().top;
     
-    if($(window).scrollTop() >= SectionTop && $("#con-img").hasClass("conImg")==false){
+    if($(window).scrollTop() >= SectionTop && $(".con-img").hasClass("conImg")==false){
       $("#conLeft-img").css({
         left:"50%",
         transform:"translateX(-58%)"
